@@ -83,3 +83,117 @@ footer {
 footer p {
     margin-bottom: 0;
 }
+
+/* COMMIT 3: Komponen dan responsivitas */
+
+.btn {
+    display: inline-block;
+    background-color: #193153;
+    color: #ffffff;
+    padding: 11px 20px;
+    border: 2px solid #193153;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #193153;
+}
+
+.hero {
+    background-color: #edf3fb;
+    padding: 40px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    max-width: 700px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #d7e0ec;
+    border-radius: 10px;
+    padding: 22px;
+    background-color: #ffffff;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.info-box {
+    background-color: #edf3fb;
+    border-left: 5px solid #193153;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+form {
+    max-width: 650px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aab9cc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#hasilPesan {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    main {
+        width: 90%;
+        margin: 25px auto;
+    }
+
+    .hero {
+        padding: 25px 20px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 12px;
+    }
+}
