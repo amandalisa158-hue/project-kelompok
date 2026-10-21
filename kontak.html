@@ -1,48 +1,103 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kontak | Website Prodi</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - UKM PNC</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="navbar">
-    <h1 class="logo">Website Prodi</h1>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="profil.html">Profil</a></li>
-        <li><a href="kegiatan.html">Kegiatan</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </nav>
-    <button id="tombol-tema" type="button">Mode Gelap</button>
-  </header>
 
-  <main>
-    <h2>Hubungi Kami</h2>
-  <p>Silakan isi formulir berikut untuk mengirim pesan.</p>
+    <header>
+        <h2>UKM PNC</h2>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="ukm.html">Daftar UKM</a>
+            <a href="tentang.html">Tentang</a>
+            <a href="kontak.html">Kontak</a>
+        </nav>
+    </header>
 
-  <section class="card">
-    <label for="nama">Nama</label>
-    <input id="nama" type="text" />
+    <main>
+        <section class="hero">
+            <h1>Hubungi Kami</h1>
+            <p>
+                Silakan gunakan formulir berikut untuk
+                menuliskan pertanyaan atau pesan mengenai UKM.
+            </p>
+        </section>
 
-    <label for="email">Email</label>
-    <input id="email" type="email" />
+        <section>
+            <h2>Formulir Kontak</h2>
 
-    <label for="pesan">Pesan</label>
-    <textarea id="pesan"></textarea>
+            <form id="formKontak">
+                <label for="nama">Nama</label>
+                <input
+                    type="text"
+                    id="nama"
+                    name="nama"
+                    placeholder="Masukkan nama"
+                    required
+                >
 
-    <button id="tombol-kirim" type="button">
-      Kirim Pesan
-    </button>
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Masukkan email"
+                    required
+                >
 
-    <p id="status-form"></p>
-  </section>
-  </main>
+                <label for="pesan">Pesan</label>
+                <textarea
+                    id="pesan"
+                    name="pesan"
+                    placeholder="Tuliskan pesan"
+                    required
+                ></textarea>
 
-  <footer><p>&copy; 2026 Program Studi D3 Teknik Informatika</p></footer>
-  <script src="js/script.js"></script>
+                <button type="submit" class="btn">
+                    Kirim Pesan
+                </button>
+
+                <p id="hasilPesan" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section>
+            <div class="info-box">
+                <h2>Informasi Kontak</h2>
+                <p>
+                    Untuk informasi resmi mengenai UKM,
+                    silakan hubungi pengurus atau pihak kampus
+                    melalui saluran kontak yang tersedia.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 UKM PNC. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script>
+        const formKontak = document.querySelector("#formKontak");
+        const hasilPesan = document.querySelector("#hasilPesan");
+
+        formKontak.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const nama = document.querySelector("#nama").value.trim();
+
+            hasilPesan.textContent =
+                "Terima kasih, " + nama +
+                ". Formulir berhasil diperiksa, tetapi pesan belum dikirim ke server.";
+
+            formKontak.reset();
+        });
+    </script>
+
 </body>
 </html>
