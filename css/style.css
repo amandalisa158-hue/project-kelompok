@@ -1,3 +1,5 @@
+/* COMMIT 1: Dasar desain website */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,98 +8,192 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: #222;
-    background-color: #f4f6fb;
+    background-color: #ffffff;
+    color: #193153;
     line-height: 1.6;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 16px 32px;
-    background-color: #1f3864;
-    color: white;
-}
-
-.logo {
-    font-size: 22px;
-}
-
-.menu {
-    display: flex;
-    gap: 24px;
-    list-style: none;
-}
-
-.menu a {
-    color: white;
+a {
     text-decoration: none;
 }
 
-.menu a:hover {
-    text-decoration: underline;
+img {
+    max-width: 100%;
 }
 
-#tombol-tema {
-    padding: 8px 14px;
-    border: none;
-    border-radius: 6px;
-    background-color: white;
-    color: #1f3864;
-    cursor: pointer;
+/* COMMIT 2: Layout halaman */
+
+header {
+    background-color: #193153;
+    color: #ffffff;
+    padding: 20px 8%;
+}
+
+header h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 12px;
+}
+
+nav a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #b9d5ff;
 }
 
 main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 32px 20px;
+    width: 84%;
+    max-width: 1100px;
+    margin: 35px auto;
+    min-height: 55vh;
 }
 
-.grid-card {
+section {
+    margin-bottom: 30px;
+}
+
+h1,
+h2,
+h3 {
+    color: #193153;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+footer {
+    background-color: #193153;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 35px;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* COMMIT 3: Komponen dan responsivitas */
+
+.btn {
+    display: inline-block;
+    background-color: #193153;
+    color: #ffffff;
+    padding: 11px 20px;
+    border: 2px solid #193153;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: #193153;
+}
+
+.hero {
+    background-color: #edf3fb;
+    padding: 40px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    max-width: 700px;
+}
+
+.card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 }
 
 .card {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
+    border: 1px solid #d7e0ec;
+    border-radius: 10px;
+    padding: 22px;
+    background-color: #ffffff;
 }
 
-.card img {
-    width: 100%;
-    border-radius: 6px;
+.card h3 {
     margin-bottom: 10px;
 }
 
-footer {
-    padding: 20px 32px;
-    text-align: center;
-    background-color: #1f3864;
-    color: white;
+.card p {
+    margin-bottom: 10px;
 }
 
-body.gelap {
-    background-color: #121826;
-    color: #e8e8e8;
+.info-box {
+    background-color: #edf3fb;
+    border-left: 5px solid #193153;
+    padding: 20px;
+    border-radius: 6px;
 }
 
-body.gelap .card {
-    background-color: #1c2538;
-    border-color: #33415c;
+form {
+    max-width: 650px;
 }
 
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aab9cc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#hasilPesan {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 18px 5%;
     }
 
-    .menu {
-        gap: 14px;
+    main {
+        width: 90%;
+        margin: 25px auto;
+    }
+
+    .hero {
+        padding: 25px 20px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 12px;
     }
 }
