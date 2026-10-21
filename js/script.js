@@ -1,33 +1,30 @@
+document.addEventListener("DOMContentLoaded", function () {
 
-const tombolTema = document.getElementById("tombol-tema");
+    // 1. Tombol Informasi UKM
+    const tombol = document.querySelector("#tombolInfo");
 
-if (tombolTema) {
-  tombolTema.addEventListener("click", function () {
-    document.body.classList.toggle("gelap");
-
-    if (document.body.classList.contains("gelap")) {
-      tombolTema.textContent = "Mode Terang";
-    } else {
-      tombolTema.textContent = "Mode Gelap";
+    if (tombol) {
+        tombol.addEventListener("click", function () {
+            alert(
+                "Silakan pilih UKM sesuai minat dan bakat. " +
+                "Untuk informasi pendaftaran, hubungi pengurus UKM."
+            );
+        });
     }
-  });
-}
 
+    // 2. Tombol Mode Gelap
+    const tombolTema = document.getElementById("tombol-tema");
 
-const tombolKirim = document.getElementById("tombol-kirim");
+    if (tombolTema) {
+        tombolTema.addEventListener("click", function () {
+            document.body.classList.toggle("gelap");
 
-if (tombolKirim) {
-  tombolKirim.addEventListener("click", function () {
-    const nama = document.getElementById("nama").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const pesan = document.getElementById("pesan").value.trim();
-    const status = document.getElementById("status-form");
-
-    if (nama === "" || email === "" || pesan === "") {
-      status.textContent = "Semua kolom wajib diisi.";
-    } else {
-      status.textContent =
-        "Terima kasih, " + nama + ". Pesan Anda diterima.";
+            if (document.body.classList.contains("gelap")) {
+                tombolTema.textContent = "Mode Terang";
+            } else {
+                tombolTema.textContent = "Mode Gelap";
+            }
+        });
     }
-  });
-}
+
+});
