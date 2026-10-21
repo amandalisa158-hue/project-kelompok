@@ -20,3 +20,66 @@ a {
 img {
     max-width: 100%;
 }
+
+/* COMMIT 2: Layout halaman */
+
+header {
+    background-color: #193153;
+    color: #ffffff;
+    padding: 20px 8%;
+}
+
+header h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 12px;
+}
+
+nav a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #b9d5ff;
+}
+
+main {
+    width: 84%;
+    max-width: 1100px;
+    margin: 35px auto;
+    min-height: 55vh;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h1,
+h2,
+h3 {
+    color: #193153;
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+footer {
+    background-color: #193153;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 35px;
+}
+
+footer p {
+    margin-bottom: 0;
+}
